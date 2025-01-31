@@ -111,12 +111,105 @@ main > section {
     color: #FF900E;
 }
 
+.facts-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:20px;
+}
+
+.fact {
+    border: 1px solid #FF900E;
+    width: 240px;
+    height: 240px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.fact-num {
+    font-weight: 600;
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.fact-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.fact-desc {
+    width: 540px;
+}
+
+.fact-icon {
+    padding-top: 20px;
+}
+
+.our-sponsors {
+   
+    margin: 20px auto;
+}
+
+.sponsor-comapnies {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.sponsor-comapnies img {
+    filter: grayscale(100%);
+}
+
+#feature-section-title {
+    border-left: 5px solid  #FF900E;
+    padding-left: 20px;
+}
+
+.feature-card{
+    padding: 30px;
+    box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
+    margin: 20px;
+    border-radius: 8px;
+}
+
+.feature-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.feature-top {
+    gap: 60px;
+}
+
+.feature-card, .feature-title {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#experience-badge {
+    padding: 45px 42px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-left: -80px;
+    margin-top: -80px;
+}
+
+#experience-year {
+    font-weight: 700;
+    font-size: 4rem;
+}
+
 @media screen and (max-width: 576px) {
     .navbar, .nav-links, .teams {
         flex-direction: column;
     }
-    .teams-img-container {
+    .teams-img-container, .facts-container, .sponsor-comapnies {
         grid-template-columns: repeat(1, 1fr);
+    }
+    .facts-container, .sponsor-comapnies {
+        justify-items: center;
+        gap: 24px;
     }
     .features {
         margin-left: 20px;
@@ -127,7 +220,10 @@ main > section {
     .teams {
         flex-direction: column;
     }
+    .teams-img-container, .facts-container, .sponsor-comapnies {
+        grid-template-columns: repeat(2, 1fr);
+    }
     .features {
-        margin-left: 50pxf;
+        margin-left: 50px;
     }
 }
